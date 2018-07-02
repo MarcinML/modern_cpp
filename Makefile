@@ -1,15 +1,15 @@
-CC=g++
+CXX=g++
 STD=-std=c++14
-CFLAGS=-Wall -Wextra -Werror -Wpedantic -o
-SOURCES= *.cpp *.hpp
+CXXFLAGS=-Wall -Wextra -Werror -Wpedantic -o
+SOURCES= *.cpp
 
 modern: $(SOURCES)
-	$(CC) *.cpp $(STD) $(CFLAGS) $@ -g
+	$(CXX) *.cpp $(STD) $(CXXFLAGS) $@ -g
 
 modernRelaese: $(SOURCES)
-	$(CC) *.cpp $(STD) $(CFLAGS) $@ -O3
+	$(CXX) *.cpp $(STD) $(CXXFLAGS) $@ -O3
 
 clean:
-	rm modern*
+	rm *.o
 
 
